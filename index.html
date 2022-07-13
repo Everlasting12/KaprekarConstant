@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kaprekar's Constant</title>
     <style>
@@ -17,6 +18,12 @@
       body::-webkit-scrollbar {
         display: none;
       }
+      .displayBlock{
+        display: block;
+      }
+      .displayNone{
+        display: none;
+      }
 
       /* Hide scrollbar for IE, Edge and Firefox */
     </style>
@@ -25,10 +32,24 @@
     <div
       class="container mx-2 w-auto my-20 py-10 flex flex-col justify-center items-center bg-orange-50 rounded-md shadow-md shadow-gray-500 md:w-2/4 md:py-20 md:mx-auto"
     >
-      <div class="flex justify-center flex-col items-start mb-10">
+      <div class="flex justify-center flex-col items-center mb-10">
         <h1 class="text-2xl text-center font-semibold">
           Kaprekar's Constant : 6174
+          <button id="btnExpand" onclick="expandView()"><span class="material-symbols-outlined rounded-full p-1 hover:bg-orange-100 hover:shadow-md">
+            expand_circle_down
+            </span></button>
         </h1>
+
+        <div class="information hidden w-auto p-5  rounded-md shadow-lg md:w-3/4 mt-10 ">
+          <p class="text-justify">
+            Kaprekar constant, or 6174, is a constant that arises when we take a
+            4-digit integer, form the largest and smallest numbers from its
+            digits, and then subtract these two numbers. Continuing with this
+            process of forming and subtracting, we will always arrive at the
+            number 6174.
+          </p>
+        </div>
+
         <label for="fourDigitNumber" class="my-3">Enter the Digits:</label>
         <input
           type="text"

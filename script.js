@@ -99,3 +99,19 @@ function createDiv() {
   );
   buttons.parentNode.insertBefore(div, buttons.nextSibling);
 }
+
+// function expandView(){
+//   let info = document.querySelector(".information");
+//   // info.classList.toggle("displayBlock");
+//   info.classList.toggle("hidden");
+
+// }
+
+document.getElementById("btnExpand").addEventListener("click", function () {
+  let info = document.querySelector(".information");
+  // info.classList.toggle("displayBlock");
+  info.classList.toggle("hidden");
+  document
+    .querySelector(".material-symbols-outlined")
+    .classList.toggle("rotate-180");
+});
